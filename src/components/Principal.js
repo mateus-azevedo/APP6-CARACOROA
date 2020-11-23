@@ -17,20 +17,23 @@ export default class Principal extends Component {
           <Image source={logo} />
 
           <TouchableHighlight
+            underlayColor
             onPress={() => {Actions.resultado();}}
           >
-            <Image source={btnJogar} />
+            <Image source={btnJogar} style={styles.btnJogar} />
           </TouchableHighlight>
         </View>
         
         <View style={styles.rodape} >
           <TouchableHighlight
+            underlayColor
             onPress={() => {Actions.sobrejogo();}}
           >
             <Image source={btnSobreJogo} />
           </TouchableHighlight>
 
           <TouchableHighlight
+            underlayColor
             onPress={() => {Actions.outrosjogos();}}
           >
             <Image source={btnOutrosJogos} />
@@ -48,13 +51,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#61BD8C'
   },
   apresentacaoJogo: {
-    flex: 10,
+    flex: 5,
     justifyContent: 'center',
     alignItems: 'center'
   },
   rodape: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-around'
+  },
+  btnJogar: {
+    marginTop: 70
   }
 });

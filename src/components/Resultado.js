@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, View, StyleSheet } from 'react-native';
+import { Image, View, StyleSheet, Text } from 'react-native';
 
 const cara = require('../imgs/moeda_cara.png');
 const coroa = require('../imgs/moeda_coroa.png');
@@ -29,6 +29,7 @@ export default class Resultado extends Component {
       return (
         <View style={styles.resultado}>
           <Image source={cara} />
+          <Text style={styles.txtResultado}>Cara</Text>
         </View>
       );
     }
@@ -36,6 +37,7 @@ export default class Resultado extends Component {
     return (
       <View style={styles.resultado}>
         <Image source={coroa} />
+        <Text style={styles.txtResultado}>Coroa</Text>
       </View>
     );
   }
@@ -48,4 +50,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
+  txtResultado: {
+    marginTop: 20,
+    fontSize: 45,
+    fontWeight: 'bold',
+    color: 'white'
+  }
 });
